@@ -1,0 +1,284 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+$vw-reference: 1920;
+$vh-reference: 1080;
+$prim-color: #000000;
+$sec-color: #b4fff1;
+$bottom-margin: 10vh;
+$top-margin: 10vh;
+$left-margin: 5vw;
+$right-margin: 5vw;
+
+$phone: '(max-width: 480px)';
+$tablet-portrait: '(max-width: 767px)';
+$tablet-landscape: '(min-width: 768px) and (max-width: 979px)';
+$large-desktop: '(min-width: 1200px)';
+$my-website-crashes-here: '(max-width: 595px)';
+$my-website-works-fine-here: '(min-width:596px)';
+
+
+@mixin respond-to($media) {
+  @media only screen and #{$media} {
+    @content;
+  }
+}
+
+@mixin hide($hide,$show) {
+  @include respond-to($my-website-crashes-here) {
+    transition: opacity ($hide) ease-out;
+    opacity: 0;
+  }
+  @include respond-to($my-website-works-fine-here) {
+    transition: opacity ($show) ease-in;
+    opacity: 1;
+  }
+}
+
+@mixin word-wrap() {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+@mixin position($top,$right,$bottom,$left) {
+
+  @if $top == 'auto' {
+    top: auto;
+  } @else {
+    top: $top;
+  }
+
+  @if $right == 'auto' {
+    right: auto;
+  } @else {
+    right: $right;
+  }
+  @if $bottom == 'auto' {
+    bottom: auto;
+  } @else {
+    bottom: $bottom;
+  }
+  @if $left == 'auto' {
+    left: auto;
+  } @else {
+    left: $left;
+  }
+
+}
+
+@mixin dimension($width,$height) {
+
+  @if $width == 'auto' {
+    width: auto;
+  } @else {
+    width: $width;
+  }
+
+  @if $height == 'auto' {
+    height: auto;
+  } @else {
+    height: $height;
+  }
+
+}
+
+@mixin transform-origin($transform) {
+  -webkit-transform-origin: $transform;
+  -moz-transform-origin: $transform;
+  -ms-transform-origin: $transform;
+  -o-transform-origin: $transform;
+  transform-origin: $transform;
+}
+
+*{
+  user-select: none;
+}
+// randomhacks.org
+header {
+  position: fixed;
+}
+
+@media only screen and (max-width: 720px) {
+  header {
+    position: absolute;
+  }
+}
+
+
+
+html, body {
+  background: $sec-color;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor:url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor.svg'), auto;
+}
+
+a{
+  text-decoration:none ;
+  color: $prim-color;
+  cursor:url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg'), auto;
+}
+
+
+
+#rectangle-top-left-1 {
+  background: $prim-color;
+  @include position($top-margin, auto, $bottom-margin, $left-margin);
+  @include dimension(7px, auto);
+  max-width: 7px;
+  position: fixed;
+}
+
+#rectangle-top-left-2 {
+  background: $prim-color;
+  @include position($top-margin, $right-margin, auto, $left-margin);
+  @include dimension(auto, 7px);
+  max-height: 7px;
+  position: fixed;
+}
+
+#rectangle-right {
+  background: $prim-color;
+  @include position($top-margin, $right-margin, $bottom-margin, auto);
+  @include dimension(7px, auto);
+  max-width: 7px;
+  position: fixed;
+}
+
+#rectangle-bottom-right-1 {
+  background: $prim-color;
+  @include position(auto, $right-margin, $bottom-margin, $left-margin);
+  @include dimension(auto, 7px);
+  max-height: 7px;
+  position: fixed;
+}
+
+#logo {
+  @include position(6.1vh, auto, auto, 19vw);
+  @include dimension(11vh, auto);
+  position: fixed;
+
+  @include hide(0.5s, 0.5s);
+  cursor:url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg'), auto;
+}
+
+#experience-container {
+  background:$sec-color;
+  padding:2vh 0;
+  @include position(6vh,4.7vw,84vh,auto);
+  @include dimension(400px,auto);
+  display:flex;
+  justify-content: space-between;
+  flex-direction:column;
+  position:fixed;
+
+  @include hide(0.5s,0.5s);
+}
+
+#experience-button {
+  @include dimension(100%,auto);
+  cursor:url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg'), auto;
+}
+
+#experience-underline {
+  @include dimension(100%,auto);
+}
+
+#contact-container{
+  background:$sec-color;
+  padding:24px 0;
+  @include position(33vh,60px,60vh,auto);
+  @include dimension(auto,210px);
+  display:flex;
+  flex-direction:row-reverse;
+  align-items:center;
+  position:fixed;
+
+  @include hide(0.5s, 0.5s);
+}
+
+#contact-button{
+  @include dimension(auto,100%);
+  cursor:url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg'), auto;
+}
+
+#contact-underline{
+  @include dimension(auto,105%);
+}
+
+#scroll-list {
+  background: $sec-color;
+  padding: 2vh;
+  @include position(auto, 15vw, 5vh, 15vw);
+  @include dimension(auto, 5.5vh);
+  position: fixed;
+  display: grid;
+  grid-template-areas: "scroll-button-1 scroll-button-2 scroll-button-3 scroll-button-4 scroll-button-5";
+}
+
+@for $i from 1 to 6 {
+  #scroll-button-#{$i} {
+    @include dimension(4vh, auto);
+    justify-self: center;
+  }
+}
+
+#real-content {
+  @include position(20vh, 20vw, 20vh, 20vw);
+  @include dimension(auto, auto);
+  position: fixed;
+}
+
+//Classes
+.project {
+  @include dimension(100%, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "project-text-1" "project-text-2";
+  grid-template-rows: auto;
+}
+
+.project-text-1 {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 6vw;
+  margin: 0 auto;
+  text-align: center;
+  align-self: center;
+  grid-area: project-text-1;
+  @include word-wrap();
+
+}
+
+.project-text-2 {
+  font-family: "Montserrat Medium", sans-serif;
+  margin: 0 auto;
+  font-size: 40px;
+  text-align: center;
+  align-self: center;
+  grid-area: project-text-2;
+  @include word-wrap();
+}
+
+.hide {
+  display: none;
+}
+
+@include respond-to($my-website-crashes-here) {
+  .project-text-1 {
+    font-size: 35px;
+  }
+  .project-text-2 {
+    font-size: 26px;
+  }
+
+  #real-content {
+    @include position(20vh, 10vw, 20vh, 10vw);
+  }
+
+}
+

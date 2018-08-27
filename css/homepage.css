@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+* {
+  user-select: none; }
+
+header {
+  position: fixed; }
+
+@media only screen and (max-width: 720px) {
+  header {
+    position: absolute; } }
+html, body {
+  background: #b4fff1;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: url("https://storage.googleapis.com/anandakshay/assets/mouse-cursor.svg"), auto; }
+
+a {
+  text-decoration: none;
+  color: #000000;
+  cursor: url("https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg"), auto; }
+
+#rectangle-top-left-1 {
+  background: #000000;
+  top: 10vh;
+  right: auto;
+  bottom: 10vh;
+  left: 5vw;
+  width: 7px;
+  height: auto;
+  max-width: 7px;
+  position: fixed; }
+
+#rectangle-top-left-2 {
+  background: #000000;
+  top: 10vh;
+  right: 5vw;
+  bottom: auto;
+  left: 5vw;
+  width: auto;
+  height: 7px;
+  max-height: 7px;
+  position: fixed; }
+
+#rectangle-right {
+  background: #000000;
+  top: 10vh;
+  right: 5vw;
+  bottom: 10vh;
+  left: auto;
+  width: 7px;
+  height: auto;
+  max-width: 7px;
+  position: fixed; }
+
+#rectangle-bottom-right-1 {
+  background: #000000;
+  top: auto;
+  right: 5vw;
+  bottom: 10vh;
+  left: 5vw;
+  width: auto;
+  height: 7px;
+  max-height: 7px;
+  position: fixed; }
+
+#logo {
+  top: 6.1vh;
+  right: auto;
+  bottom: auto;
+  left: 19vw;
+  width: 11vh;
+  height: auto;
+  position: fixed;
+  cursor: url("https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg"), auto; }
+  @media only screen and (max-width: 595px) {
+    #logo {
+      transition: opacity 0.5s ease-out;
+      opacity: 0; } }
+  @media only screen and (min-width: 596px) {
+    #logo {
+      transition: opacity 0.5s ease-in;
+      opacity: 1; } }
+
+#experience-container {
+  background: #b4fff1;
+  padding: 2vh 0;
+  top: 6vh;
+  right: 4.7vw;
+  bottom: 84vh;
+  left: auto;
+  width: 400px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: fixed; }
+  @media only screen and (max-width: 595px) {
+    #experience-container {
+      transition: opacity 0.5s ease-out;
+      opacity: 0; } }
+  @media only screen and (min-width: 596px) {
+    #experience-container {
+      transition: opacity 0.5s ease-in;
+      opacity: 1; } }
+
+#experience-button {
+  width: 100%;
+  height: auto;
+  cursor: url("https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg"), auto; }
+
+#experience-underline {
+  width: 100%;
+  height: auto; }
+
+#contact-container {
+  background: #b4fff1;
+  padding: 24px 0;
+  top: 33vh;
+  right: 60px;
+  bottom: 60vh;
+  left: auto;
+  width: auto;
+  height: 210px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: fixed; }
+  @media only screen and (max-width: 595px) {
+    #contact-container {
+      transition: opacity 0.5s ease-out;
+      opacity: 0; } }
+  @media only screen and (min-width: 596px) {
+    #contact-container {
+      transition: opacity 0.5s ease-in;
+      opacity: 1; } }
+
+#contact-button {
+  width: auto;
+  height: 100%;
+  cursor: url("https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg"), auto; }
+
+#contact-underline {
+  width: auto;
+  height: 105%; }
+
+#scroll-list {
+  background: #b4fff1;
+  padding: 2vh;
+  top: auto;
+  right: 15vw;
+  bottom: 5vh;
+  left: 15vw;
+  width: auto;
+  height: 5.5vh;
+  position: fixed;
+  display: grid;
+  grid-template-areas: "scroll-button-1 scroll-button-2 scroll-button-3 scroll-button-4 scroll-button-5"; }
+
+#scroll-button-1 {
+  width: 4vh;
+  height: auto;
+  justify-self: center; }
+
+#scroll-button-2 {
+  width: 4vh;
+  height: auto;
+  justify-self: center; }
+
+#scroll-button-3 {
+  width: 4vh;
+  height: auto;
+  justify-self: center; }
+
+#scroll-button-4 {
+  width: 4vh;
+  height: auto;
+  justify-self: center; }
+
+#scroll-button-5 {
+  width: 4vh;
+  height: auto;
+  justify-self: center; }
+
+#real-content {
+  top: 20vh;
+  right: 20vw;
+  bottom: 20vh;
+  left: 20vw;
+  width: auto;
+  height: auto;
+  position: fixed; }
+
+.project {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "project-text-1" "project-text-2";
+  grid-template-rows: auto; }
+
+.project-text-1 {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 6vw;
+  margin: 0 auto;
+  text-align: center;
+  align-self: center;
+  grid-area: project-text-1;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; }
+
+.project-text-2 {
+  font-family: "Montserrat Medium", sans-serif;
+  margin: 0 auto;
+  font-size: 40px;
+  text-align: center;
+  align-self: center;
+  grid-area: project-text-2;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; }
+
+.hide {
+  display: none; }
+
+@media only screen and (max-width: 595px) {
+  .project-text-1 {
+    font-size: 35px; }
+
+  .project-text-2 {
+    font-size: 26px; }
+
+  #real-content {
+    top: 20vh;
+    right: 10vw;
+    bottom: 20vh;
+    left: 10vw; } }
+
+/*# sourceMappingURL=homepage.css.map */

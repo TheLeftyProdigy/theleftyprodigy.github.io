@@ -1,1 +1,77 @@
-Hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0 ,user-scalable=no, shrink-to-fit=yes">
+    <title>Anand Akshay's Portfolio</title>
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/buttoninteraction.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+</head>
+<body>
+
+<!--main stuff-->
+<div id="rectangle-top-left-1"></div>
+<div id="rectangle-top-left-2"></div>
+<div id="rectangle-right"></div>
+<div id="rectangle-bottom-right-1"></div>
+<div id="rectangle-left"></div>
+
+<img id="logo" src="assets/logo.svg">
+
+
+<div id="experience-container">
+    <img id="experience-button" src="assets/experience-button.svg">
+    <img id="experience-underline" class="hide" src="assets/experience-underline.svg">
+</div>
+<div id="contact-container">
+    <img id="contact-button" src="assets/contact-button.svg">
+    <img id="contact-underline" class="hide" src="assets/contact-underline.svg">
+</div>
+<!--need to put fallback png-->
+<div id="scroll-list">
+    <img id="scroll-button-1" src="assets/unselected-button.svg">
+    <img id="scroll-button-2" src="assets/unselected-button.svg">
+    <img id="scroll-button-3" src="assets/unselected-button.svg">
+    <img id="scroll-button-4" src="assets/unselected-button.svg">
+    <img id="scroll-button-5" src="assets/unselected-button.svg">
+</div>
+
+<div id="real-content">
+    <div id="project-1" class="project hide">
+        <div class="project-text-1"><a href="https://www.behance.net/gallery/65227941/Tsundoku-A-College-Magazine" target="_blank">TSUNDOKU</a></div>
+        <div class="project-text-2">MAGAZINE DESIGN</div>
+    </div>
+    <div id="project-2" class="project hide">
+        <div class="project-text-1"><a href="https://www.behance.net/gallery/51274911/Low-Poly-Art" target="_blank">THE 67TH MILESTONE</a></div>
+        <div class="project-text-2">LOW POLY ART</div>
+    </div>
+    <div id="project-3" class="project hide">
+        <div class="project-text-1"><a href="https://www.behance.net/gallery/51274157/Bridging-the-Gaps" target="_blank">TEDxBMU</a></div>
+        <div class="project-text-2">HEAD DESIGNER</div>
+    </div>
+    <div id="project-4" class="project hide">
+        <div class="project-text-1"><a href="https://akshay.akshatmittal.com/Search-Visualizer/" target="_blank">SEARCH VISUALIZER</a></div>
+        <div class="project-text-2">COLLEGE PROJECT (NO MOBILE VERSION YET)</div>
+    </div>
+    <div id="project-5" class="project hide">
+        <div class="project-text-1">BRAIN UNO</div>
+        <div class="project-text-2">CO-FOUNDER</div>
+    </div>
+    <div id="contact" class="project hide">
+        <div class="project-text-1">NEED INTERNSHIP<br>PLS</div>
+        <div class="project-text-2"><a href="mailto:theleftyprodigy@gmail.com" target="_blank"><u>EMAIL</u></a><br>
+            <a href="https://www.behance.net/theleftypr1294" target="_blank"><u>BEHANCE</u></a><br>
+            <a href="https://www.google.com" target="_blank"><u>RESUME</u></a></div>
+    </div>
+</div>
+
+<script src="js/button_controller.js" type="text/javascript"></script>
+<script src="js/cursor_controller.js" type="text/javascript"></script>
+</body>
+</html>
