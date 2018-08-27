@@ -1,1 +1,0 @@
-# theleftyprodigy.github.io
