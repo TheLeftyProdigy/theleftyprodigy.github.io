@@ -9,7 +9,7 @@ header {
   header {
     position: absolute; } }
 html, body {
-  background: #b4fff1;
+  background: #EDEAD0;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -85,7 +85,7 @@ a {
       opacity: 1; } }
 
 #experience-container {
-  background: #b4fff1;
+  background: #EDEAD0;
   padding: 2vh 0;
   top: 6vh;
   right: 4.7vw;
@@ -108,15 +108,14 @@ a {
 
 #experience-button {
   width: 100%;
-  height: auto;
-  cursor: url("https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg"), auto; }
+  height: auto; }
 
 #experience-underline {
   width: 100%;
   height: auto; }
 
 #contact-container {
-  background: #b4fff1;
+  background: #EDEAD0;
   padding: 24px 0;
   top: 33vh;
   right: 60px;
@@ -139,15 +138,14 @@ a {
 
 #contact-button {
   width: auto;
-  height: 100%;
-  cursor: url("https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg"), auto; }
+  height: 100%; }
 
 #contact-underline {
   width: auto;
   height: 105%; }
 
 #scroll-list {
-  background: #b4fff1;
+  background: #EDEAD0;
   padding: 2vh;
   top: auto;
   right: 15vw;

@@ -4,7 +4,7 @@
 $vw-reference: 1920;
 $vh-reference: 1080;
 $prim-color: #000000;
-$sec-color: #b4fff1;
+$sec-color: #EDEAD0;
 $bottom-margin: 10vh;
 $top-margin: 10vh;
 $left-margin: 5vw;
@@ -17,7 +17,7 @@ $large-desktop: '(min-width: 1200px)';
 $my-website-crashes-here: '(max-width: 595px)';
 $my-website-works-fine-here: '(min-width:596px)';
 
-
+// 412 783
 @mixin respond-to($media) {
   @media only screen and #{$media} {
     @content;
@@ -182,7 +182,7 @@ a{
 
 #experience-button {
   @include dimension(100%,auto);
-  cursor:url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg'), auto;
+  //cursor:url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg'), auto;
 }
 
 #experience-underline {
@@ -204,7 +204,7 @@ a{
 
 #contact-button{
   @include dimension(auto,100%);
-  cursor:url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg'), auto;
+  //cursor:url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg'), auto;
 }
 
 #contact-underline{

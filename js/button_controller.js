@@ -26,7 +26,7 @@ let hideAll = function () {
     $('#contact').addClass('hide');
 };
 
-const col = ['#b4fff1', '#DD6E42', '#E8DAB2', '#4F6D7A', '#C0D6DF', '#EAEAEA'];
+const col = ['#EDEAD0', '#FFCF56', '#F4A07C', '#8F857D', '#F9A695', '#EDCB96'];
 
 let colorChange = function (i) {
     $('body').css('background', col[i]);
@@ -166,7 +166,8 @@ for(let i =1; i<=5;i++){
     $("#project-"+i).addClass('animated zoomIn fast');
 }
 $('#contact').addClass('animated zoomIn fast');
-
+$('#experience-underline').addClass('animated fadeInRight');
+$('#contact-underline').addClass('animated fadeInDown');
 
 setTimeout(function(){
     for(let i =1; i<=5;i++){
