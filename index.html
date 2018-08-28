@@ -11,7 +11,8 @@
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/zingtouch/1.0.6/zingtouch.min.js'></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/swipe/2.0/swipe.min.js"></script>-->
 </head>
 <body>
 
@@ -42,36 +43,48 @@
     <img id="scroll-button-5" src="assets/unselected-button.svg">
 </div>
 
-<div id="real-content">
-    <div id="project-1" class="project hide">
-        <div class="project-text-1"><a href="https://www.behance.net/gallery/65227941/Tsundoku-A-College-Magazine" target="_blank">TSUNDOKU</a></div>
-        <div class="project-text-2">MAGAZINE DESIGN</div>
+<div id="real-content" class="swipe">
+    <div id="splash-screen-content" class="project hide">
+        <div class="project-text-1">
+            ANAND AKSHAY
+        </div>
+        <div class="project-text-2">
+           AND HIS WORK SO FAR ...
+        </div>
+
     </div>
-    <div id="project-2" class="project hide">
-        <div class="project-text-1"><a href="https://www.behance.net/gallery/51274911/Low-Poly-Art" target="_blank">THE 67TH MILESTONE</a></div>
-        <div class="project-text-2">LOW POLY ART</div>
-    </div>
-    <div id="project-3" class="project hide">
-        <div class="project-text-1"><a href="https://www.behance.net/gallery/51274157/Bridging-the-Gaps" target="_blank">TEDxBMU</a></div>
-        <div class="project-text-2">HEAD DESIGNER</div>
-    </div>
-    <div id="project-4" class="project hide">
-        <div class="project-text-1"><a href="https://akshay.akshatmittal.com/Search-Visualizer/" target="_blank">SEARCH VISUALIZER</a></div>
-        <div class="project-text-2">COLLEGE PROJECT (NO MOBILE VERSION YET)</div>
-    </div>
-    <div id="project-5" class="project hide">
-        <div class="project-text-1">BRAIN UNO</div>
-        <div class="project-text-2">CO-FOUNDER</div>
-    </div>
-    <div id="contact" class="project hide">
-        <div class="project-text-1">NEED INTERNSHIP<br>PLS</div>
-        <div class="project-text-2"><a href="mailto:theleftyprodigy@gmail.com" target="_blank"><u>EMAIL</u></a><br>
-            <a href="https://www.behance.net/theleftypr1294" target="_blank"><u>BEHANCE</u></a><br>
-            <a href="https://www.google.com" target="_blank"><u>RESUME</u></a></div>
-    </div>
+        <div id="project-1" class="project hide">
+            <div class="project-text-1"><a href="https://www.behance.net/gallery/65227941/Tsundoku-A-College-Magazine"
+                                           target="_blank">TSUNDOKU</a></div>
+            <div class="project-text-2">MAGAZINE DESIGN</div>
+        </div>
+        <div id="project-2" class="project hide">
+            <div class="project-text-1"><a href="https://www.behance.net/gallery/51274911/Low-Poly-Art" target="_blank">THE
+                67TH MILESTONE</a></div>
+            <div class="project-text-2">LOW POLY ART</div>
+        </div>
+        <div id="project-3" class="project hide">
+            <div class="project-text-1"><a href="https://www.behance.net/gallery/51274157/Bridging-the-Gaps"
+                                           target="_blank">TEDxBMU</a></div>
+            <div class="project-text-2">HEAD DESIGNER</div>
+        </div>
+        <div id="project-4" class="project hide">
+            <div class="project-text-1"><a href="https://akshay.akshatmittal.com/Search-Visualizer/" target="_blank">SEARCH
+                VISUALIZER</a></div>
+            <div class="project-text-2">COLLEGE PROJECT (NO MOBILE VERSION YET)</div>
+        </div>
+        <div id="project-5" class="project hide">
+            <div class="project-text-1">BRAIN UNO</div>
+            <div class="project-text-2">CO-FOUNDER AND DESIGN HEAD</div>
+        </div>
+        <div id="contact" class="project hide">
+            <div class="project-text-1">NEED<br>INTERNSHIP</div>
+            <div class="project-text-2"><a href="mailto:theleftyprodigy@gmail.com" target="_blank"><u>EMAIL</u></a><br>
+                <a href="https://www.behance.net/theleftypr1294" target="_blank"><u>BEHANCE</u></a><br>
+                <a href="https://storage.googleapis.com/anandakshay/assets/My%20Resume.pdf" target="_blank"><u>RESUME</u></a></div>
+        </div>
 </div>
 
 <script src="js/button_controller.js" type="text/javascript"></script>
-<script src="js/cursor_controller.js" type="text/javascript"></script>
 </body>
 </html>
