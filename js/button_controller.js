@@ -38,9 +38,7 @@ let colorChange = function (i) {
     $('#contact-container').css('background', col[i]);
 };
 
-let splashselector = $('#splash-screen-content');
-splashselector.removeClass('hide');
-splashselector.addClass('animated zoomIn fast');
+
 
 $('#scroll-button-1').click(function () {
 
@@ -186,3 +184,6 @@ setTimeout(function(){
     }
 }, 1000);
 
+var splashselector = $('#splash-screen-content');
+splashselector.removeClass('hide');
+splashselector.addClass('animated zoomIn fast');
