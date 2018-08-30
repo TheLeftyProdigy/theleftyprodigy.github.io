@@ -149,6 +149,12 @@ $('#experience-button').click(function () {
 
 $('#XPbutton').click(function () {
 
+    $(this).addClass('animated wobble');
+
+    setTimeout(function () {
+        $('#XPbutton').removeClass('animated wobble');
+    }, 1000);
+
         if ((selection() !== 1) && clearButtons()) {
             hideAll();
             $('#project-1').removeClass('hide');
@@ -173,10 +179,17 @@ $('#contact-button').click(function () {
 
 $('#CONTbutton').click(function () {
 
+        $(this).addClass('animated wobble');
+
+        setTimeout(function () {
+            $('#CONTbutton').removeClass('animated wobble');
+        }, 1000);
+
         clearButtons();
         hideAll();
         $('#contact').removeClass('hide');
         colorChange(0);
+
 
     }
 );
@@ -202,16 +215,19 @@ $('#contact').addClass('animated zoomIn fast');
 $('#experience-underline').addClass('animated fadeInRight');
 $('#contact-underline').addClass('animated fadeInDown');
 
+$('#CONTbutton').addClass('animated slideInDown');
+$('#XPbutton').addClass('animated slideInDown');
+
 //Hax
 setTimeout(function () {
     for (let i = 1; i <= 5; i++) {
         $('#scroll-button-' + i).removeClass('animated lightSpeedIn');
     }
+    $('#CONTbutton').removeClass('animated slideInDown');
+    $('#XPbutton').removeClass('animated slideInDown');
 }, 1000);
 
 var splashselector = $('#splash-screen-content');
 splashselector.removeClass('hide');
 splashselector.addClass('animated zoomIn fast');
 
-$('#CONTbutton').addClass('animated slideInDown');
-$('#XPbutton').addClass('animated slideInDown');
