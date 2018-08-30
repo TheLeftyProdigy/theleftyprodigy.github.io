@@ -39,7 +39,6 @@ let colorChange = function (i) {
 };
 
 
-
 $('#scroll-button-1').click(function () {
 
         if ((selection() !== 1) && clearButtons() && ($(this).attr('src') === "assets/unselected-button.svg")) {
@@ -135,6 +134,7 @@ $('#scroll-button-5').click(function () {
     }
 );
 
+//Experience Buttons
 $('#experience-button').click(function () {
 
         if ((selection() !== 1) && clearButtons()) {
@@ -147,6 +147,19 @@ $('#experience-button').click(function () {
     }
 );
 
+$('#XPbutton').click(function () {
+
+        if ((selection() !== 1) && clearButtons()) {
+            hideAll();
+            $('#project-1').removeClass('hide');
+            $('#scroll-button-1').attr('src', 'assets/selected-button.svg');
+            colorChange(1);
+        }
+    }
+);
+
+
+//Contact Buttons
 $('#contact-button').click(function () {
 
         clearButtons();
@@ -158,7 +171,18 @@ $('#contact-button').click(function () {
     }
 );
 
-$('#logo').click(function(){
+$('#CONTbutton').click(function () {
+
+        clearButtons();
+        hideAll();
+        $('#contact').removeClass('hide');
+        colorChange(0);
+
+    }
+);
+
+//Logo Button
+$('#logo').click(function () {
     clearButtons();
     hideAll();
     $('#splash-screen-content').removeClass('hide');
@@ -168,22 +192,26 @@ $('#logo').click(function(){
 });
 
 
-// Screw some shit up and rework on it? for animation
-for(let i =1; i<=5;i++){
-    $('#scroll-button-'+i).addClass('animated lightSpeedIn');
-    $("#project-"+i).addClass('animated zoomIn fast');
+// Animations and Touchups
+for (let i = 1; i <= 5; i++) {
+    $('#scroll-button-' + i).addClass('animated lightSpeedIn');
+    $("#project-" + i).addClass('animated zoomIn fast');
 }
 $('#contact').addClass('animated zoomIn fast');
 
 $('#experience-underline').addClass('animated fadeInRight');
 $('#contact-underline').addClass('animated fadeInDown');
 
-setTimeout(function(){
-    for(let i =1; i<=5;i++){
-        $('#scroll-button-'+i).removeClass('animated lightSpeedIn');
+//Hax
+setTimeout(function () {
+    for (let i = 1; i <= 5; i++) {
+        $('#scroll-button-' + i).removeClass('animated lightSpeedIn');
     }
 }, 1000);
 
 var splashselector = $('#splash-screen-content');
 splashselector.removeClass('hide');
 splashselector.addClass('animated zoomIn fast');
+
+$('#CONTbutton').addClass('animated slideInDown');
+$('#XPbutton').addClass('animated slideInDown');

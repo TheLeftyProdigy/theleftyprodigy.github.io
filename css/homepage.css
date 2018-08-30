@@ -75,11 +75,11 @@ a {
   height: auto;
   position: fixed;
   cursor: url("https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg"), auto; }
-  @media only screen and (max-width: 595px) {
+  @media only screen and (max-width: 768px) {
     #logo {
       transition: opacity 0.5s ease-out;
       opacity: 0; } }
-  @media only screen and (min-width: 596px) {
+  @media only screen and (min-width: 769px) {
     #logo {
       transition: opacity 0.5s ease-in;
       opacity: 1; } }
@@ -93,15 +93,19 @@ a {
   left: auto;
   width: 400px;
   height: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   position: fixed; }
-  @media only screen and (max-width: 595px) {
+  @media only screen and (max-width: 768px) {
     #experience-container {
       transition: opacity 0.5s ease-out;
       opacity: 0; } }
-  @media only screen and (min-width: 596px) {
+  @media only screen and (min-width: 769px) {
     #experience-container {
       transition: opacity 0.5s ease-in;
       opacity: 1; } }
@@ -123,15 +127,19 @@ a {
   left: auto;
   width: auto;
   height: 210px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   position: fixed; }
-  @media only screen and (max-width: 595px) {
+  @media only screen and (max-width: 768px) {
     #contact-container {
       transition: opacity 0.5s ease-out;
       opacity: 0; } }
-  @media only screen and (min-width: 596px) {
+  @media only screen and (min-width: 769px) {
     #contact-container {
       transition: opacity 0.5s ease-in;
       opacity: 1; } }
@@ -200,7 +208,7 @@ a {
   grid-template-rows: auto; }
 
 .project-text-1 {
-  font-family: "Montserrat SemiBold", sans-serif;
+  font-family: "Montserrat SemiBold", "Futura Std Medium", sans-serif;
   font-size: 6vw;
   margin: 0 auto;
   text-align: center;
@@ -212,7 +220,7 @@ a {
   hyphens: auto; }
 
 .project-text-2 {
-  font-family: "Montserrat Medium", sans-serif;
+  font-family: "Montserrat Medium", "Futura Std Light",sans-serif;
   margin: 0 auto;
   font-size: 40px;
   text-align: center;
@@ -226,17 +234,84 @@ a {
 .hide {
   display: none; }
 
-@media only screen and (max-width: 595px) {
+#XPbutton {
+  font-family: "Montserrat Medium", "Futura Std Light", sans-serif;
+  font-size: 30px;
+  top: 4vh;
+  right: auto;
+  bottom: auto;
+  left: 6.5vw;
+  text-align: left;
+  position: fixed; }
+
+#CONTbutton {
+  font-family: "Montserrat Medium", "Futura Std Light", sans-serif;
+  font-size: 30px;
+  top: 4vh;
+  right: 6vw;
+  bottom: auto;
+  left: auto;
+  text-align: left;
+  position: fixed; }
+
+@media only screen and (max-width: 768px) {
   .project-text-1 {
-    font-size: 35px; }
+    font-size: 50px; }
 
   .project-text-2 {
-    font-size: 26px; }
+    font-size: 30px; }
+
+  #XPbutton {
+    display: block; }
+
+  #CONTbutton {
+    display: block; }
 
   #real-content {
     top: 20vh;
     right: 10vw;
     bottom: 20vh;
     left: 10vw; } }
+@media only screen and (min-width: 1080px) and (max-width: 1440px) {
+  #contact-container {
+    top: 33vh;
+    right: 40px;
+    bottom: 60vh;
+    left: auto; } }
+@media only screen and (min-width: 770px) and (max-width: 1079px) {
+  #contact-container {
+    top: 33vh;
+    right: 20px;
+    bottom: 60vh;
+    left: auto; } }
+@media only screen and (max-width: 430px) {
+  .project-text-1 {
+    font-size: 12vw; }
+
+  .project-text-2 {
+    font-size: 7vw; } }
+@media only screen and (max-width: 540px) {
+  #XPbutton {
+    font-size: 25px;
+    top: 5vh; }
+
+  #CONTbutton {
+    font-size: 25px;
+    top: 5vh; } }
+@media only screen and (min-height: 520px) and (max-height: 660px) {
+  #XPbutton {
+    top: 4vh; }
+
+  #CONTbutton {
+    top: 4vh; } }
+@media only screen and (min-height: 476px) and (max-height: 519px) {
+  #XPbutton {
+    top: 3vh; }
+
+  #CONTbutton {
+    top: 3vh; } }
+@media only screen and (max-height: 475px) {
+  * {
+    display: none; } }
 
 /*# sourceMappingURL=homepage.css.map */
