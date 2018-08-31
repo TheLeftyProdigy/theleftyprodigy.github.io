@@ -21,8 +21,8 @@ let hideAll = function () {
         let selector = $('#project-' + i);
         selector.addClass('hide');
     }
-    $('#experience-underline').addClass('hide');
-    $('#contact-underline').addClass('hide');
+    $('#experience-underline').addClass('partial_hide');
+    $('#contact-underline').addClass('partial_hide');
     $('#contact').addClass('hide');
     $('#splash-screen-content').addClass('hide');
 };
@@ -44,14 +44,14 @@ $('#scroll-button-1').click(function () {
         if ((selection() !== 1) && clearButtons() && ($(this).attr('src') === "assets/unselected-button.svg")) {
             hideAll();
             $('#project-1').removeClass('hide');
-            $('#experience-underline').removeClass('hide');
+            $('#experience-underline').removeClass('partial_hide');
             $(this).attr('src', 'assets/selected-button.svg');
             colorChange(1);
         }
         else if ($(this).attr('src') === "assets/unselected-button.svg") {
             hideAll();
             $('#project-1').removeClass('hide');
-            $('#experience-underline').removeClass('hide');
+            $('#experience-underline').removeClass('partial_hide');
             $(this).attr('src', 'assets/selected-button.svg');
             colorChange(1);
         }
@@ -64,14 +64,14 @@ $('#scroll-button-2').click(function () {
             hideAll();
             $(this).attr('src', 'assets/selected-button.svg');
             $('#project-2').removeClass('hide');
-            $('#experience-underline').removeClass('hide');
+            $('#experience-underline').removeClass('partial_hide');
             colorChange(2);
         }
         else if ($(this).attr('src') === "assets/unselected-button.svg") {
             hideAll();
             $(this).attr('src', 'assets/selected-button.svg');
             $('#project-2').removeClass('hide');
-            $('#experience-underline').removeClass('hide');
+            $('#experience-underline').removeClass('partial_hide');
             colorChange(2);
         }
     }
@@ -82,14 +82,14 @@ $('#scroll-button-3').click(function () {
         if ((selection() !== 3) && clearButtons() && ($(this).attr('src') === "assets/unselected-button.svg")) {
             hideAll();
             $('#project-3').removeClass('hide');
-            $('#experience-underline').removeClass('hide');
+            $('#experience-underline').removeClass('partial_hide');
             $(this).attr('src', 'assets/selected-button.svg');
             colorChange(3);
         }
         else if ($(this).attr('src') === "assets/unselected-button.svg") {
             hideAll();
             $('#project-3').removeClass('hide');
-            $('#experience-underline').removeClass('hide');
+            $('#experience-underline').removeClass('partial_hide');
             $(this).attr('src', 'assets/selected-button.svg');
             colorChange(3);
         }
@@ -101,14 +101,14 @@ $('#scroll-button-4').click(function () {
         if ((selection() !== 4) && clearButtons() && ($(this).attr('src') === "assets/unselected-button.svg")) {
             hideAll();
             $('#project-4').removeClass('hide');
-            $('#experience-underline').removeClass('hide');
+            $('#experience-underline').removeClass('partial_hide');
             $(this).attr('src', 'assets/selected-button.svg');
             colorChange(4);
         }
         else if ($(this).attr('src') === "assets/unselected-button.svg") {
             hideAll();
             $('#project-4').removeClass('hide');
-            $('#experience-underline').removeClass('hide');
+            $('#experience-underline').removeClass('partial_hide');
             $(this).attr('src', 'assets/selected-button.svg');
             colorChange(4);
         }
@@ -120,14 +120,14 @@ $('#scroll-button-5').click(function () {
         if ((selection() !== 5) && clearButtons() && ($(this).attr('src') === "assets/unselected-button.svg")) {
             hideAll();
             $('#project-5').removeClass('hide');
-            $('#experience-underline').removeClass('hide');
+            $('#experience-underline').removeClass('partial_hide');
             $(this).attr('src', 'assets/selected-button.svg');
             colorChange(5);
         }
         else if ($(this).attr('src') === "assets/unselected-button.svg") {
             hideAll();
             $('#project-5').removeClass('hide');
-            $('#experience-underline').removeClass('hide');
+            $('#experience-underline').removeClass('partial_hide');
             $(this).attr('src', 'assets/selected-button.svg');
             colorChange(5);
         }
@@ -140,7 +140,7 @@ $('#experience-button').click(function () {
         if ((selection() !== 1) && clearButtons()) {
             hideAll();
             $('#project-1').removeClass('hide');
-            $('#experience-underline').removeClass('hide');
+            $('#experience-underline').removeClass('partial_hide');
             $('#scroll-button-1').attr('src', 'assets/selected-button.svg');
             colorChange(1);
         }
@@ -171,7 +171,7 @@ $('#contact-button').click(function () {
         clearButtons();
         hideAll();
         $('#contact').removeClass('hide');
-        $('#contact-underline').removeClass('hide');
+        $('#contact-underline').removeClass('partial_hide');
         colorChange(0);
 
     }
