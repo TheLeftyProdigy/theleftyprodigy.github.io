@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,600');
 
-
 $vw-reference: 1920;
 $vh-reference: 1080;
 $prim-color: #000000;
@@ -19,17 +18,16 @@ $my-website-works-fine-here: '(min-width:769px)';
 $contact-fix-1: '(min-width:1080px) and (max-width:1440px)';
 $contact-fix-2: '(min-width:770px) and (max-width:1079px)';
 
-$text-fix-1:'(max-width:430px)';
+$text-fix-1: '(max-width:430px)';
 
-$button-text-fix-1:'(max-width:540px)';
+$button-text-fix-1: '(max-width:540px)';
 
 //Height Issues LOL
-$height-button-text-fix-1:'(min-height:520px) and (max-height:660px)';
-$height-button-text-fix-2:'(min-height:476px) and (max-height:519px)';
+$height-button-text-fix-1: '(min-height:520px) and (max-height:660px)';
+$height-button-text-fix-2: '(min-height:476px) and (max-height:519px)';
 
 // You crazy????
-$limits:'(max-height:475px)';
-
+$limits: '(max-height:475px)';
 
 // 412 783
 // Limits: 475 Height
@@ -44,7 +42,7 @@ $limits:'(max-height:475px)';
   @include respond-to($my-website-crashes-here) {
     transition: opacity ($hide) ease-out;
     opacity: 0;
-    display:none;
+    display: none;
   }
   @include respond-to($my-website-works-fine-here) {
     transition: opacity ($show) ease-in;
@@ -109,9 +107,10 @@ $limits:'(max-height:475px)';
   transform-origin: $transform;
 }
 
-*{
+* {
   user-select: none;
 }
+
 // randomhacks.org
 header {
   position: fixed;
@@ -123,24 +122,20 @@ header {
   }
 }
 
-
-
 html, body {
-  background: $sec-color;
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  cursor:url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor.svg'), auto;
+  cursor: url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor.svg'), auto;
 }
 
-a{
-  text-decoration:none ;
+a {
+  text-decoration: none;
   color: $prim-color;
-  cursor:url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg'), auto;
+  cursor: url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg'), auto;
 }
-
 
 #left-group {
   background: $prim-color;
@@ -151,19 +146,18 @@ a{
 }
 
 //Top Group Starts
-#top-group{
-  @include position(6vh,$right-margin,auto,$left-margin);
-  @include dimension(auto,86px);
+#top-group {
+  @include position(6vh, $right-margin, auto, $left-margin);
+  @include dimension(auto, 86px);
   position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: flex-end
 }
 
-
 #rectangle-top-start {
   background: $prim-color;
-  margin-top:4vh;
+  margin-top: 4vh;
   @include dimension(100%, 7px);
   max-height: 7px;
 }
@@ -178,43 +172,44 @@ a{
   justify-content: center;
   flex-direction: column;
 
-  @include hide(0.5s,0.5s);
+  @include hide(0.5s, 0.5s);
 }
 
 #experience-button {
-  @include dimension(auto,2em);
+  @include dimension(auto, 2em);
   padding: 0 12px;
 }
 
 #experience-underline {
-  margin-top:10px;
-  @include dimension(auto,auto);
+  margin-top: 10px;
+  @include dimension(auto, auto);
 }
+
 //Top Group Ends
 
 //Right Group Starts
-#right-group{
+#right-group {
   top: 10vh;
   right: 4vw;
   bottom: 10vh;
   left: auto;
-  @include position($top-margin,4vw,$bottom-margin,auto);
-  @include dimension(60px,auto);
+  @include position($top-margin, 4vw, $bottom-margin, auto);
+  @include dimension(60px, auto);
   position: fixed;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-#rectangle-right-start{
+#rectangle-right-start {
   background: $prim-color;
-  @include dimension(7px,65%);
+  @include dimension(7px, 65%);
   margin-top: 45px;
   margin-right: 1vw;
 }
 
-#contact-container{
-  @include dimension(100%,100%);
+#contact-container {
+  @include dimension(100%, 100%);
   display: -webkit-box;
   display: -moz-box;
   margin: 20px 0;
@@ -224,52 +219,50 @@ a{
   flex-direction: row-reverse;
   align-items: normal;
 
-
-  @include hide(0.5s,0.5s);
+  @include hide(0.5s, 0.5s);
 
 }
 
-#contact-button{
-  @include dimension(100%,auto);
+#contact-button {
+  @include dimension(100%, auto);
   padding: 10px 0;
 }
 
-#contact-underline{
-  @include dimension(100%,auto);
+#contact-underline {
+  @include dimension(100%, auto);
 }
 
-#rectangle-right-end{
+#rectangle-right-end {
   background: $prim-color;
-  @include dimension(7px,100%);
+  @include dimension(7px, 100%);
   margin-right: 1vw;
 }
+
 //Right Group Ends
 
 //Bottom Group Starts
-#bottom-group{
-@include position(auto,$right-margin,5vh,$left-margin);
-  @include dimension(auto,9vh);
+#bottom-group {
+  @include position(auto, $right-margin, 5vh, $left-margin);
+  @include dimension(auto, 9vh);
   position: fixed;
-  display:  flex;
-  flex-direction:  row;
-  align-items:  normal;
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
 }
 
-#rectangle-bottom-start{
-  background:  $prim-color;
-  @include dimension(100%,7px);
+#rectangle-bottom-start {
+  background: $prim-color;
+  @include dimension(100%, 7px);
   margin-top: 4vh;
 }
 
-#rectangle-bottom-end{
+#rectangle-bottom-end {
   background: $prim-color;
-  @include dimension(100%,7px);
+  @include dimension(100%, 7px);
   margin-top: 4vh;
 }
 
 //Bottom Group Ends
-
-
 
 #logo {
   @include position(6.1vh, auto, auto, 19vw);
@@ -277,10 +270,8 @@ a{
   position: fixed;
 
   @include hide(0.5s, 0.5s);
-  cursor:url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg'), auto;
+  cursor: url('https://storage.googleapis.com/anandakshay/assets/mouse-cursor-white.svg'), auto;
 }
-
-
 
 #scroll-list {
   height: auto;
@@ -290,14 +281,14 @@ a{
   grid-template-areas: "scroll-button-1 scroll-button-2 scroll-button-3 scroll-button-4 scroll-button-5";
 }
 
-.scroll-button{
-  @include dimension(4vh,auto);
-  justify-self:center;
+.scroll-button {
+  @include dimension(4vh, auto);
+  justify-self: center;
 }
 
 @for $i from 1 to 6 {
   #scroll-button-#{$i} {
-    grid-area:scroll-button-#{$i};
+    grid-area: scroll-button-#{$i};
   }
 }
 
@@ -331,7 +322,7 @@ a{
 }
 
 .project-text-2 {
-  font-family: "Montserrat", Helvetica ,sans-serif;
+  font-family: "Montserrat", Helvetica, sans-serif;
   font-weight: 500;
   margin: 0 auto;
   font-size: 40px;
@@ -345,13 +336,13 @@ a{
   display: none;
 }
 
-.partial_hide{
+.partial_hide {
   visibility: hidden;
 }
 
 //Mobile Buttons
 #XPbutton {
-  font-family: "Montserrat", Helvetica ,sans-serif;
+  font-family: "Montserrat", Helvetica, sans-serif;
   font-weight: 500;
   font-size: 30px;
   @include position(4vh, auto, auto, 6.5vw);
@@ -359,15 +350,40 @@ a{
   position: fixed;
 }
 
-#CONTbutton{
-  font-family: "Montserrat", Helvetica ,sans-serif;
+#CONTbutton {
+  font-family: "Montserrat", Helvetica, sans-serif;
   font-weight: 500;
   font-size: 30px;
-  @include position(4vh,6vw,auto,auto);
+  @include position(4vh, 6vw, auto, auto);
   text-align: left;
   position: fixed;
 }
 
+//Background Code starts here
+.bg {
+  margin: 0;
+  padding: 0;
+}
+
+$x: 0vh;
+
+@for $i from 1 to 6 {
+  #bg-#{$i} {
+    width:0;
+    height:20vh;
+    top:$x;
+    left:0;
+    position:fixed;
+  }
+  $x:$x+20vh;
+}
+
+#bg-0 {
+  width: 100%;
+  height: 100%;
+}
+
+//Background Code ends here
 
 @include respond-to($my-website-crashes-here) {
   .project-text-1 {
@@ -377,37 +393,37 @@ a{
     font-size: 30px;
   }
 
-  #XPbutton{
-    display:block;
+  #XPbutton {
+    display: block;
   }
 
-  #CONTbutton{
-    display:block;
+  #CONTbutton {
+    display: block;
   }
 
   #real-content {
     @include position(20vh, 10vw, 20vh, 10vw);
   }
 
-  #rectangle-right-start{
-    margin-top:0;
+  #rectangle-right-start {
+    margin-top: 0;
   }
 
 }
 
-@include respond-to($contact-fix-1){
-  #contact-container{
-    @include position(33vh,40px,60vh,auto);
+@include respond-to($contact-fix-1) {
+  #contact-container {
+    @include position(33vh, 40px, 60vh, auto);
   }
 }
 
-@include respond-to($contact-fix-2){
-  #contact-container{
-    @include position(33vh,20px,60vh,auto);
+@include respond-to($contact-fix-2) {
+  #contact-container {
+    @include position(33vh, 20px, 60vh, auto);
   }
 }
 
-@include respond-to($text-fix-1){
+@include respond-to($text-fix-1) {
   .project-text-1 {
     font-size: 12vw;
   }
@@ -416,42 +432,40 @@ a{
   }
 }
 
-@include respond-to($button-text-fix-1){
-  #XPbutton{
-    font-size:25px;
-    top:5vh;
+@include respond-to($button-text-fix-1) {
+  #XPbutton {
+    font-size: 25px;
+    top: 5vh;
   }
 
-  #CONTbutton{
-    font-size:25px;
-    top:5vh;
-  }
-}
-
-@include respond-to($height-button-text-fix-1)
-{
-  #XPbutton{
-    top:4vh;
-  }
-
-  #CONTbutton{
-    top:4vh;
+  #CONTbutton {
+    font-size: 25px;
+    top: 5vh;
   }
 }
 
-@include respond-to($height-button-text-fix-2)
-{
-  #XPbutton{
-    top:3vh;
+@include respond-to($height-button-text-fix-1) {
+  #XPbutton {
+    top: 4vh;
   }
 
-  #CONTbutton{
-    top:3vh;
+  #CONTbutton {
+    top: 4vh;
   }
 }
 
-@include respond-to($limits){
-  *{
-    display:none;
+@include respond-to($height-button-text-fix-2) {
+  #XPbutton {
+    top: 3vh;
+  }
+
+  #CONTbutton {
+    top: 3vh;
+  }
+}
+
+@include respond-to($limits) {
+  * {
+    display: none;
   }
 }

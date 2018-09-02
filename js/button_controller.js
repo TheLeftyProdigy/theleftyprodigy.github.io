@@ -1,3 +1,22 @@
+// const col = ['#EDEAD0', '#FFCF56', '#F4A07C', '#E2CFEA', '#F9A695', '#EDCB96'];
+const col = ['#EBEBEB',
+    '#ED6F69',
+    '#EABBEB',
+    '#9AA6C3',
+    '#8477AC',
+    '#CDA0D1'];
+
+//Laptop
+let expButtonSelector = $('#experience-button');
+let contactButtonSelector = $('#contact-button');
+
+let logoSelector = $('#logo');
+
+//Mobile
+let XPButtonSelector = $('#XPbutton');
+let CONTButtonSelector = $('#CONTbutton');
+
+
 let selection = function () {
     for (let i = 1; i <= 5; i++) {
         if ($('#scroll-button-' + i).attr('src') === "assets/selected-button.svg") {
@@ -27,16 +46,46 @@ let hideAll = function () {
     $('#splash-screen-content').addClass('hide');
 };
 
-const col = ['#EDEAD0', '#FFCF56', '#F4A07C', '#8F857D', '#F9A695', '#EDCB96'];
 
-let colorChange = function (i) {
-    $('body').css('background', col[i]);
-    $('#experience-button').css('background', col[i]);
-    $('#contact-button').css('background', col[i]);
-    $('#scroll-list').css('background', col[i]);
-    $('#experience-container').css('background', col[i]);
-    $('#contact-container').css('background', col[i]);
+let colorChange = function (col_id) {
+
+    let tl = new TimelineLite;
+    TweenMax.killTweensOf(["#bg-0", "#bg-1", "#bg-2", "#bg-3", "#bg-4", "#bg-5"]);
+
+    tl.staggerFromTo(["#bg-1", "#bg-2", "#bg-3", "#bg-4", "#bg-5"],
+        0.75,
+        {width: "0vw"},
+        {width: "100vw", background: col[col_id]},
+        0.25
+    ).to("#bg-0", 0, {background: col[col_id]})
+
 };
+
+let hover_in = function () {
+    TweenLite.to($(this), 1, {scale: 1.1});
+};
+
+let hover_out = function () {
+    TweenLite.to($(this), 1, {scale: 1});
+};
+
+//Hover stuff
+expButtonSelector.hover(
+    hover_in,
+    hover_out
+);
+
+contactButtonSelector.hover(
+    hover_in,
+    hover_out
+);
+
+logoSelector.hover(
+    hover_in,
+    hover_out
+);
+
+
 
 
 $('#scroll-button-1').click(function () {
@@ -135,25 +184,33 @@ $('#scroll-button-5').click(function () {
 );
 
 //Experience Buttons
-$('#experience-button').click(function () {
+expButtonSelector.click(function () {
 
         if ((selection() !== 1) && clearButtons()) {
             hideAll();
+            let underlineSelector = $('#experience-underline');
             $('#project-1').removeClass('hide');
-            $('#experience-underline').removeClass('partial_hide');
+            underlineSelector.removeClass('partial_hide');
+
+            underlineSelector.addClass('animated fadeInRight');
+            setTimeout(function () {
+                underlineSelector.removeClass('animated fadeInRight');
+            }, 1000);
+
             $('#scroll-button-1').attr('src', 'assets/selected-button.svg');
             colorChange(1);
         }
     }
 );
 
-$('#XPbutton').click(function () {
 
-    $(this).addClass('animated wobble');
+XPButtonSelector.click(function () {
 
-    setTimeout(function () {
-        $('#XPbutton').removeClass('animated wobble');
-    }, 1000);
+        $(this).addClass('animated wobble');
+
+        setTimeout(function () {
+            $('#XPbutton').removeClass('animated wobble');
+        }, 1000);
 
         if ((selection() !== 1) && clearButtons()) {
             hideAll();
@@ -166,18 +223,24 @@ $('#XPbutton').click(function () {
 
 
 //Contact Buttons
-$('#contact-button').click(function () {
+contactButtonSelector.click(function () {
 
+        let underlineSelector = $('#contact-underline');
         clearButtons();
         hideAll();
         $('#contact').removeClass('hide');
-        $('#contact-underline').removeClass('partial_hide');
-        colorChange(0);
+        underlineSelector.removeClass('partial_hide');
+        underlineSelector.addClass('animated fadeInDown');
 
+        setTimeout(function () {
+            underlineSelector.removeClass('animated fadeInDown');
+        }, 1500);
+
+        colorChange(0);
     }
 );
 
-$('#CONTbutton').click(function () {
+CONTButtonSelector.click(function () {
 
         $(this).addClass('animated wobble');
 
@@ -195,12 +258,10 @@ $('#CONTbutton').click(function () {
 );
 
 //Logo Button
-$('#logo').click(function () {
+logoSelector.click(function () {
     clearButtons();
     hideAll();
     $('#splash-screen-content').removeClass('hide');
-    $('#contact-underline').addClass('hide');
-    $('#experience-underline').addClass('hide');
     colorChange(0);
 });
 
@@ -212,22 +273,20 @@ for (let i = 1; i <= 5; i++) {
 }
 $('#contact').addClass('animated zoomIn fast');
 
-$('#experience-underline').addClass('animated fadeInRight');
-$('#contact-underline').addClass('animated fadeInDown');
 
-$('#CONTbutton').addClass('animated slideInDown');
-$('#XPbutton').addClass('animated slideInDown');
+CONTButtonSelector.addClass('animated slideInDown');
+XPButtonSelector.addClass('animated slideInDown');
 
 //Hax
 setTimeout(function () {
     for (let i = 1; i <= 5; i++) {
         $('#scroll-button-' + i).removeClass('animated lightSpeedIn');
     }
-    $('#CONTbutton').removeClass('animated slideInDown');
-    $('#XPbutton').removeClass('animated slideInDown');
+    CONTButtonSelector.removeClass('animated slideInDown');
+    XPButtonSelector.removeClass('animated slideInDown');
 }, 1000);
 
-var splashselector = $('#splash-screen-content');
+let splashselector = $('#splash-screen-content');
 splashselector.removeClass('hide');
 splashselector.addClass('animated zoomIn fast');
 
