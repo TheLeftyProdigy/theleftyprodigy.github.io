@@ -2,6 +2,7 @@ let swipelefthandler = function(i){
     let currselectionbutton = $('#scroll-button-'+i);
     let nextselectionbutton = $('#scroll-button-'+(i+1));
     if(i>=1 && i<5){
+        heartbeatstop();
         currselectionbutton.attr('src','assets/unselected-button.svg');
         nextselectionbutton.attr('src','assets/selected-button.svg');
         nextselectionbutton.addClass('animated rubberBand');
@@ -10,11 +11,11 @@ let swipelefthandler = function(i){
         colorChange(i+1);
     }
     else{
+        heartbeatstop();
         nextselectionbutton = $('#scroll-button-1');
         currselectionbutton.attr('src','assets/unselected-button.svg');
         nextselectionbutton.attr('src','assets/selected-button.svg');
         nextselectionbutton.addClass('animated rubberBand');
-        console.log()
         $('#project-5').addClass('hide');
         $('#project-1').removeClass('hide');
         colorChange(1);
@@ -28,6 +29,7 @@ let swiperighthandler = function(i){
     let currselectionbutton = $('#scroll-button-'+i);
     let nextselectionbutton = $('#scroll-button-'+(i-1));
     if(i>1 && i<=5){
+        heartbeatstop();
         currselectionbutton.attr('src','assets/unselected-button.svg');
         nextselectionbutton.attr('src','assets/selected-button.svg');
         nextselectionbutton.addClass('animated rubberBand');
@@ -36,6 +38,7 @@ let swiperighthandler = function(i){
         colorChange(i-1);
     }
     else{
+        heartbeatstop();
         nextselectionbutton = $('#scroll-button-5');
         currselectionbutton.attr('src','assets/unselected-button.svg');
         nextselectionbutton.attr('src','assets/selected-button.svg');
