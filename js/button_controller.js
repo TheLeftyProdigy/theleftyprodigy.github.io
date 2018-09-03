@@ -219,8 +219,8 @@ expButtonSelector.click(function () {
 
             underlineSelector.addClass('animated fadeInRight');
             setTimeout(function () {
-                $('#scroll-button-1').removeClass('animated rubberBand');
-                underlineSelector.removeClass('animated fadeInRight');
+                $('#scroll-button-1').removeClass('rubberBand');
+                underlineSelector.removeClass('fadeInRight');
             }, 1000);
 
             $('#scroll-button-1').attr('src', 'assets/selected-button.svg');
@@ -235,7 +235,7 @@ XPButtonSelector.click(function () {
         $(this).addClass('animated wobble');
 
         setTimeout(function () {
-            $('#XPbutton').removeClass('animated wobble');
+            $('#XPbutton').removeClass('wobble');
         }, 1000);
 
         if ((selection() !== 1) && clearButtons()) {
@@ -261,7 +261,7 @@ contactButtonSelector.click(function () {
         underlineSelector.addClass('animated fadeInDown');
 
         setTimeout(function () {
-            underlineSelector.removeClass('animated fadeInDown');
+            underlineSelector.removeClass('fadeInDown');
         }, 1500);
 
         colorChange(0);
@@ -274,7 +274,7 @@ CONTButtonSelector.click(function () {
         $(this).addClass('animated wobble');
 
         setTimeout(function () {
-            $('#CONTbutton').removeClass('animated wobble');
+            $('#CONTbutton').removeClass('wobble');
         }, 1000);
 
         clearButtons();
@@ -318,8 +318,8 @@ $(document).ready(function () {
             $('#scroll-button-' + i).removeClass('lightSpeedIn');
         }
         heartbeatstart();
-        CONTButtonSelector.removeClass('animated slideInDown');
-        XPButtonSelector.removeClass('animated slideInDown');
+        CONTButtonSelector.removeClass('slideInDown');
+        XPButtonSelector.removeClass('slideInDown');
     }, 1000);
 
 
