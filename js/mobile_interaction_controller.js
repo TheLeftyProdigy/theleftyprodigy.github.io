@@ -12,13 +12,16 @@ let swipelefthandler = function(i){
     }
     else{
         heartbeatstop();
-        nextselectionbutton = $('#scroll-button-1');
+        let nextselectionbutton = $('#scroll-button-1');
         currselectionbutton.attr('src','assets/unselected-button.svg');
         nextselectionbutton.attr('src','assets/selected-button.svg');
         nextselectionbutton.addClass('animated rubberBand');
         $('#project-5').addClass('hide');
         $('#project-1').removeClass('hide');
         colorChange(1);
+        setTimeout(function(){
+            nextselectionbutton.removeClass('rubberBand');
+        },500);
     }
     setTimeout(function(){
         nextselectionbutton.removeClass('rubberBand');
@@ -39,13 +42,16 @@ let swiperighthandler = function(i){
     }
     else{
         heartbeatstop();
-        nextselectionbutton = $('#scroll-button-5');
+        let nextselectionbutton = $('#scroll-button-5');
         currselectionbutton.attr('src','assets/unselected-button.svg');
         nextselectionbutton.attr('src','assets/selected-button.svg');
         nextselectionbutton.addClass('animated rubberBand');
         $('#project-1').addClass('hide');
         $('#project-5').removeClass('hide');
         colorChange(5);
+        setTimeout(function(){
+            nextselectionbutton.removeClass('rubberBand');
+        },500);
     }
     setTimeout(function(){
         nextselectionbutton.removeClass('rubberBand');
