@@ -20,7 +20,7 @@ let swipelefthandler = function(i){
         colorChange(1);
     }
     setTimeout(function(){
-        nextselectionbutton.removeClass('animated rubberBand');
+        nextselectionbutton.removeClass('rubberBand');
     },500);
 };
 
@@ -45,7 +45,7 @@ let swiperighthandler = function(i){
         colorChange(5);
     }
     setTimeout(function(){
-        nextselectionbutton.removeClass('animated rubberBand');
+        nextselectionbutton.removeClass('rubberBand');
     },500);
 
 };

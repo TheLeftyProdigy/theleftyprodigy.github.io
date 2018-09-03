@@ -35,6 +35,16 @@ let clearButtons = function () {
     return true;
 };
 
+let heartbeatstop = function () {
+    $('#scroll-button-1').removeClass('infinite heartBeat');
+};
+
+
+var heartbeatstart = function () {
+    $('#scroll-button-1').addClass('animated infinite heartBeat');
+};
+
+
 let hideAll = function () {
     for (let i = 1; i <= 5; i++) {
         let selector = $('#project-' + i);
@@ -46,10 +56,7 @@ let hideAll = function () {
     $('#splash-screen-content').addClass('hide');
 };
 
-let killTween = function()
-{
 
-};
 let tl = new TimelineLite;
 
 let colorChange = function (col_id) {
@@ -61,13 +68,12 @@ let colorChange = function (col_id) {
     tl.progress(1);
 
 
-
     tl.staggerFromTo(["#bg-1", "#bg-2", "#bg-3", "#bg-4", "#bg-5"],
         0.75,
         {width: "0vw"},
         {width: "100vw", background: col[col_id]},
         0.25
-    ).to("#bg-0", 0,{background: col[col_id]});
+    ).to("#bg-0", 0, {background: col[col_id]});
 
 
 };
@@ -97,8 +103,9 @@ logoSelector.hover(
 );
 
 
-
 $('#scroll-button-1').click(function () {
+
+        heartbeatstop();
 
         if ((selection() !== 1) && clearButtons() && ($(this).attr('src') === "assets/unselected-button.svg")) {
             hideAll();
@@ -119,6 +126,7 @@ $('#scroll-button-1').click(function () {
 
 $('#scroll-button-2').click(function () {
 
+        heartbeatstop();
         if ((selection() !== 2) && clearButtons() && ($(this).attr('src') === "assets/unselected-button.svg")) {
             hideAll();
             $(this).attr('src', 'assets/selected-button.svg');
@@ -138,6 +146,7 @@ $('#scroll-button-2').click(function () {
 
 $('#scroll-button-3').click(function () {
 
+        heartbeatstop();
         if ((selection() !== 3) && clearButtons() && ($(this).attr('src') === "assets/unselected-button.svg")) {
             hideAll();
             $('#project-3').removeClass('hide');
@@ -157,6 +166,7 @@ $('#scroll-button-3').click(function () {
 
 $('#scroll-button-4').click(function () {
 
+        heartbeatstop();
         if ((selection() !== 4) && clearButtons() && ($(this).attr('src') === "assets/unselected-button.svg")) {
             hideAll();
             $('#project-4').removeClass('hide');
@@ -176,6 +186,7 @@ $('#scroll-button-4').click(function () {
 
 $('#scroll-button-5').click(function () {
 
+        heartbeatstop();
         if ((selection() !== 5) && clearButtons() && ($(this).attr('src') === "assets/unselected-button.svg")) {
             hideAll();
             $('#project-5').removeClass('hide');
@@ -196,6 +207,10 @@ $('#scroll-button-5').click(function () {
 //Experience Buttons
 expButtonSelector.click(function () {
 
+        heartbeatstop();
+        $('#scroll-button-1').addClass('animated rubberBand');
+
+
         if ((selection() !== 1) && clearButtons()) {
             hideAll();
             let underlineSelector = $('#experience-underline');
@@ -204,6 +219,7 @@ expButtonSelector.click(function () {
 
             underlineSelector.addClass('animated fadeInRight');
             setTimeout(function () {
+                $('#scroll-button-1').removeClass('animated rubberBand');
                 underlineSelector.removeClass('animated fadeInRight');
             }, 1000);
 
@@ -215,7 +231,7 @@ expButtonSelector.click(function () {
 
 
 XPButtonSelector.click(function () {
-
+        heartbeatstop();
         $(this).addClass('animated wobble');
 
         setTimeout(function () {
@@ -235,6 +251,8 @@ XPButtonSelector.click(function () {
 //Contact Buttons
 contactButtonSelector.click(function () {
 
+        heartbeatstart();
+
         let underlineSelector = $('#contact-underline');
         clearButtons();
         hideAll();
@@ -252,6 +270,7 @@ contactButtonSelector.click(function () {
 
 CONTButtonSelector.click(function () {
 
+        heartbeatstart();
         $(this).addClass('animated wobble');
 
         setTimeout(function () {
@@ -269,34 +288,44 @@ CONTButtonSelector.click(function () {
 
 //Logo Button
 logoSelector.click(function () {
+
+    heartbeatstart();
     clearButtons();
     hideAll();
     $('#splash-screen-content').removeClass('hide');
     colorChange(0);
+
 });
 
 
 // Animations and Touchups
-for (let i = 1; i <= 5; i++) {
-    $('#scroll-button-' + i).addClass('animated lightSpeedIn');
-    $("#project-" + i).addClass('animated zoomIn fast');
-}
-$('#contact').addClass('animated zoomIn fast');
+
+$(document).ready(function () {
+
+    for (let i = 1; i <= 5; i++) {
+        $('#scroll-button-' + i).addClass('animated lightSpeedIn');
+        $("#project-" + i).addClass('animated zoomIn fast');
+    }
+    $('#contact').addClass('animated zoomIn fast');
 
 
-CONTButtonSelector.addClass('animated slideInDown');
-XPButtonSelector.addClass('animated slideInDown');
+    CONTButtonSelector.addClass('animated slideInDown');
+    XPButtonSelector.addClass('animated slideInDown');
 
 //Hax
-setTimeout(function () {
-    for (let i = 1; i <= 5; i++) {
-        $('#scroll-button-' + i).removeClass('animated lightSpeedIn');
-    }
-    CONTButtonSelector.removeClass('animated slideInDown');
-    XPButtonSelector.removeClass('animated slideInDown');
-}, 1000);
+    setTimeout(function () {
+        for (let i = 1; i <= 5; i++) {
+            $('#scroll-button-' + i).removeClass('lightSpeedIn');
+        }
+        heartbeatstart();
+        CONTButtonSelector.removeClass('animated slideInDown');
+        XPButtonSelector.removeClass('animated slideInDown');
+    }, 1000);
 
-let splashselector = $('#splash-screen-content');
-splashselector.removeClass('hide');
-splashselector.addClass('animated zoomIn fast');
+
+    let splashselector = $('#splash-screen-content');
+    splashselector.removeClass('hide');
+    splashselector.addClass('animated zoomIn fast');
+
+});
 

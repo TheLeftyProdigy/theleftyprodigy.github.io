@@ -26,6 +26,7 @@ $button-text-fix-1: '(max-width:540px)';
 $height-button-text-fix-1: '(min-height:520px) and (max-height:660px)';
 $height-button-text-fix-2: '(min-height:476px) and (max-height:519px)';
 
+
 // You crazy????
 $limits: '(max-height:475px)';
 
@@ -393,6 +394,9 @@ $x: 0vh;
 
 //Background Code ends here
 
+
+
+
 @include respond-to($my-website-crashes-here) {
   .project-text-1 {
     font-size: 50px;
@@ -477,3 +481,4 @@ $x: 0vh;
     display: none;
   }
 }
+
