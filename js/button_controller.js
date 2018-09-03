@@ -46,18 +46,29 @@ let hideAll = function () {
     $('#splash-screen-content').addClass('hide');
 };
 
+let killTween = function()
+{
+
+};
+let tl = new TimelineLite;
 
 let colorChange = function (col_id) {
 
-    let tl = new TimelineLite;
-    TweenMax.killTweensOf(["#bg-0", "#bg-1", "#bg-2", "#bg-3", "#bg-4", "#bg-5"]);
+
+    // [$('#bg-0'), $('#bg-1'), $('#bg-2'), $('#bg-3'), $('#bg-4'), $('#bg-5')]
+
+
+    tl.progress(1);
+
+
 
     tl.staggerFromTo(["#bg-1", "#bg-2", "#bg-3", "#bg-4", "#bg-5"],
         0.75,
         {width: "0vw"},
         {width: "100vw", background: col[col_id]},
         0.25
-    ).to("#bg-0", 0, {background: col[col_id]})
+    ).to("#bg-0", 0,{background: col[col_id]});
+
 
 };
 
@@ -84,7 +95,6 @@ logoSelector.hover(
     hover_in,
     hover_out
 );
-
 
 
 
