@@ -1,10 +1,10 @@
 // const col = ['#EDEAD0', '#FFCF56', '#F4A07C', '#E2CFEA', '#F9A695', '#EDCB96'];
 const col = ['#EBEBEB',
-    '#ED6F69',
-    '#EABBEB',
-    '#9AA6C3',
-    '#8477AC',
-    '#CDA0D1'];
+    '#ea4335',
+    '#34a853',
+    '#4286f4',
+    '#fbbc05',
+    '#f2f2f2'];
 
 //Laptop
 let expButtonSelector = $('#experience-button');
