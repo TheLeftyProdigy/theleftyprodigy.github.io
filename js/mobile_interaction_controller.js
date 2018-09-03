@@ -14,6 +14,7 @@ let swipelefthandler = function(i){
         currselectionbutton.attr('src','assets/unselected-button.svg');
         nextselectionbutton.attr('src','assets/selected-button.svg');
         nextselectionbutton.addClass('animated rubberBand');
+        console.log()
         $('#project-5').addClass('hide');
         $('#project-1').removeClass('hide');
         colorChange(1);
