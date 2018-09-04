@@ -102,6 +102,12 @@ logoSelector.hover(
     hover_out
 );
 
+$('a').hover(
+  function(){
+
+  }
+);
+
 
 $('#scroll-button-1').click(function () {
 
