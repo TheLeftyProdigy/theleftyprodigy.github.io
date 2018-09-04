@@ -102,11 +102,7 @@ logoSelector.hover(
     hover_out
 );
 
-$('a').hover(
-  function(){
 
-  }
-);
 
 
 $('#scroll-button-1').click(function () {
@@ -308,12 +304,13 @@ logoSelector.click(function () {
 
 $(document).ready(function () {
 
+    $('.underline').addClass('animated tada');
+
     for (let i = 1; i <= 5; i++) {
         $('#scroll-button-' + i).addClass('animated lightSpeedIn');
         $("#project-" + i).addClass('animated zoomIn fast');
     }
     $('#contact').addClass('animated zoomIn fast');
-
 
     CONTButtonSelector.addClass('animated slideInDown');
     XPButtonSelector.addClass('animated slideInDown');
